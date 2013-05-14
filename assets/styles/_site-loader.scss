@@ -1,0 +1,26 @@
+.nag-site-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $color-white;
+  z-index: 10000;
+}
+
+.nag-non-blocking-loader .nag-message {
+  border-top: none;
+  padding: 0.25em 0.5em;
+  @include border-bottom-radius(10px);
+}
+
+.nag-site-loader-text {
+  padding-top: 50px;
+  width: 131px;
+  margin: 0 auto;
+  padding-left: 20px;
+  z-index: 1001;
+  background-image: image_url('ajax-loader.gif', false, false);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}

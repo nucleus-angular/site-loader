@@ -8,7 +8,7 @@ angular.module('nag.siteLoader', [
     return {
       enableBlocking: function(html) {
         if(!html) {
-          html = '<div class="site-loader-text">Loading Application</div>';
+          html = '<div class="text">Loading Application</div>';
         }
 
         if($('#site-loader').length === 0) {

@@ -1,3 +1,9 @@
+/**
+ * Handles management of blocking and non-block site loaders
+ *
+ * @module nag.siteLoader
+ * @ngservice nagSiteLoader
+ */
 angular.module('nag.siteLoader', [
   'nag.notify'
 ])
@@ -6,6 +12,13 @@ angular.module('nag.siteLoader', [
   function(nagNotify) {
     var nagNotifyId = null;
     return {
+      /**
+       * Enable blocking site loader
+       *
+       * @method enableBlocking
+       *
+       * @param {string} [html] HTML to use for the loading screen
+       */
       enableBlocking: function(html) {
         if(!html) {
           html = '<div class="text">Loading Application</div>';
@@ -16,16 +29,38 @@ angular.module('nag.siteLoader', [
         }
       },
 
+      /**
+       * Disable the blocking site loader
+       *
+       * @method disableBlocking
+       */
       disableBlocking: function() {
         if($('#site-loader').length !== 0) {
           $('#site-loader').remove();
         }
       },
 
+      /**
+       * Whether or not the blocking site loader is active
+       *
+       * @todo: research: can this be turned into a property with defineProperty instead of having this a a method?
+       *
+       * @method isBlockingActive
+       *
+       * @returns {boolean} Whether or not the blocking site loader is active
+       */
       isBlockingActive: function() {
         return $('#site-loader').length !== 0;
       },
 
+      /**
+       * Enable non-blocking site loader
+       *
+       * @method enableNotBlocking
+       *
+       * @todo: get link to notofy component documentation in this parameter description
+       * @param {options} options Options for the notify component that is used for the non-blockign site loader
+       */
       enableNonBlocking: function(options) {
         var self = this;
 
@@ -46,6 +81,11 @@ angular.module('nag.siteLoader', [
         nagNotifyId = nagNotify.notify(notifyOptions);
       },
 
+      /**
+       * Disable the non-blocking site loader
+       *
+       * @method disableNonBlocking
+       */
       disableNonBlocking: function() {
         if(nagNotifyId) {
           nagNotify.remove(nagNotifyId);

@@ -1,5 +1,15 @@
 /**
- * Handles management of blocking and non-block site loaders
+ * # Site Loader
+ *
+ * This services allows you to create site loader indicators.  There are 2 types of indicators that can be creating.
+ *
+ * The first type is a site wide indicator which takes of the whole screen and prevent the user from doing anything.  Think of something like where GMail first loads
+ *
+ * EXAMPLE TODO
+ *
+ * The second type of indicator is more of a page to page type indicator that would generally be used while the application is doing something.  Think of the loading message GMail show when switching tabs.
+ *
+ * EXAMPLE TODO
  *
  * @module nag.siteLoader
  * @ngservice nagSiteLoader

@@ -1,0 +1,8 @@
+{
+  "tests": [
+    "dalek/site-loader.js"
+  ],
+  "browser": [
+    "chrome"
+  ]
+}

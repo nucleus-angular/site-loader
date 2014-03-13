@@ -14,9 +14,7 @@
  * @module nag.siteLoader
  * @ngservice nagSiteLoader
  */
-angular.module('nag.siteLoader', [
-  'nag.notify'
-])
+angular.module('nag.siteLoader')
 .factory('nagSiteLoader', [
   'nagNotify',
   function(nagNotify) {

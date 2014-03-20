@@ -2,6 +2,7 @@
   "tests": [
     "dalek/site-loader.js"
   ],
+  "logLevel": "1",
   "browser": [
     "chrome"
   ]

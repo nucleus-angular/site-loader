@@ -1,8 +1,8 @@
 {
   "name": "nucleus-angular-site-loader",
-  "version": "0.2.3",
+  "version": "0.5.0",
   "dependencies": {
-    "nucleus-angular-notify": "master"
+    "nucleus-angular-notify": "0.5.0"
   },
   "devDependencies": {
     "jquery": "2.x.x",
@@ -12,6 +12,6 @@
     "angular": "1.2.x",
     "angular-animate": "1.2.x",
     "angular-ui-router": "0.2.0",
-    "nucleus-angular-sass-framework": "master"
+    "nucleus-angular-sass-framework": "0.5.0"
   }
 }

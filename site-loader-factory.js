@@ -33,7 +33,7 @@ angular.module('nag.siteLoader')
         }
 
         if($('#site-loader').length === 0) {
-          $('body').append('<div id="site-loader" class="site-loader">' + html + '</div>');
+          $('body').append('<div id="site-loader" class="site-loader is-active">' + html + '</div>');
         }
       },
 
